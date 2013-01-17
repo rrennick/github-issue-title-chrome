@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Github issue title",
+  "description": "Add the issue number to the document title",
+  "version": "0.1",
+
+  "permissions": [
+    "tabs",
+    /* Request permissions for all sites */
+    "https://github.com/*"
+  ],
+  "content_scripts" : [
+  	{
+	  	"matches" : ["https://github.com/*"],
+	  	"js" : ["title.js"],
+	  	"run_at" : "document_start"
+	}
+  ]
+}
